@@ -2,7 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-style: normal;
   font-size: 12px;
   line-height: 2;
@@ -14,7 +15,8 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 img {
@@ -60,10 +62,16 @@ a:active {
   text-decoration: none;
   color: #ffffff;
   background-color: #4f4d6a;
+  background-image: -webkit-gradient( linear, left bottom, left top, from(rgb(79,77,106)), to(rgb(110,108,138)));
+  background-image: -webkit-linear-gradient( bottom, rgb(79,77,106) 0%, rgb(110,108,138) 100%);
+  background-image: -o-linear-gradient( bottom, rgb(79,77,106) 0%, rgb(110,108,138) 100%);
   background-image: linear-gradient( 0deg, rgb(79,77,106) 0%, rgb(110,108,138) 100%);
   border: 1px solid rgb(79, 77, 106);
   border-radius: 22px;
-  box-shadow:
+  -webkit-box-shadow:
+    0px 1px 0px 0px rgba(0, 0, 0, 0.13),
+    inset 0px 2px 0px 0px rgba(255, 255, 255, 0.75);
+          box-shadow:
     0px 1px 0px 0px rgba(0, 0, 0, 0.13),
     inset 0px 2px 0px 0px rgba(255, 255, 255, 0.75);
 }
@@ -71,14 +79,22 @@ a:active {
 .button:focus,
 .button:hover {
   color: #ffffff;
+  background-image: -webkit-gradient( linear, left bottom, left top, from(rgba(79,77,106, 0.7)), to(rgba(110,108,138, 0.7)));
+  background-image: -webkit-linear-gradient( bottom, rgba(79,77,106, 0.7) 0%, rgba(110,108,138, 0.7) 100%);
+  background-image: -o-linear-gradient( bottom, rgba(79,77,106, 0.7) 0%, rgba(110,108,138, 0.7) 100%);
   background-image: linear-gradient( 0deg, rgba(79,77,106, 0.7) 0%, rgba(110,108,138, 0.7) 100%);
-  box-shadow:
+  -webkit-box-shadow:
+    0px 1px 0px 0px rgba(0, 0, 0, 0.13);
+          box-shadow:
     0px 1px 0px 0px rgba(0, 0, 0, 0.13)
 }
 
 .button:active {
   background-image: none;
-  box-shadow:
+  -webkit-box-shadow:
+    0px 1px 0px 0px rgba(0, 0, 0, 0.13),
+    inset 0px 2px 0px 0px rgba(0, 0, 0, 0.5);
+          box-shadow:
     0px 1px 0px 0px rgba(0, 0, 0, 0.13),
     inset 0px 2px 0px 0px rgba(0, 0, 0, 0.5);
     opacity: 1;
@@ -86,18 +102,28 @@ a:active {
 
 .button-light {
   background-color: #94758a;
+  background-image: -webkit-gradient( linear, left bottom, left top, from(rgb(156,131,148)), to(rgb(208,194,202)));
+  background-image: -webkit-linear-gradient( bottom, rgb(156,131,148) 0%, rgb(208,194,202) 100%);
+  background-image: -o-linear-gradient( bottom, rgb(156,131,148) 0%, rgb(208,194,202) 100%);
   background-image: linear-gradient( 0deg, rgb(156,131,148) 0%, rgb(208,194,202) 100%);
   border: 1px solid rgb(146, 124, 144);
 }
 
 .button-light:focus,
 .button-light:hover {
+  background-image: -webkit-gradient( linear, left bottom, left top, from(rgba(156,131,148, 0.7)), to(rgba(208,194,202, 0.7)));
+  background-image: -webkit-linear-gradient( bottom, rgba(156,131,148, 0.7) 0%, rgba(208,194,202, 0.7) 100%);
+  background-image: -o-linear-gradient( bottom, rgba(156,131,148, 0.7) 0%, rgba(208,194,202, 0.7) 100%);
   background-image: linear-gradient( 0deg, rgba(156,131,148, 0.7) 0%, rgba(208,194,202, 0.7) 100%);
 }
 
 .heading-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   font-style: italic;
   font-size: 18px;
@@ -109,7 +135,9 @@ a:active {
 .heading-prev::after {
   content: "";
   display: inline-block;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 1px;
   background-color: #ffffff;
 }
@@ -159,8 +187,12 @@ a:active {
 }
 
 .header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 38px;
 }
 
@@ -168,9 +200,14 @@ a:active {
 /*  #MAIN-NAVIGATION  ----------------*/
 
 .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -193,9 +230,14 @@ a:active {
 /*  #WE-ARE  -------------------------*/
 
 .we-are {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: uppercase;
   padding: 115px 0;
 }
@@ -239,9 +281,14 @@ a:active {
 }
 
 .works .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 56px 0 100px;
 }
 
@@ -254,8 +301,11 @@ a:active {
 }
 
 .works-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -265,7 +315,9 @@ a:active {
 }
 
 .works-items li {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   max-width: 220px;
   margin: 0 10px;
 }
@@ -332,8 +384,11 @@ a:active {
 }
 
 .about-us ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -376,9 +431,14 @@ a:active {
 }
 
 .index-footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 48px 10px;
 }
 
